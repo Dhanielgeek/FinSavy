@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.logo-name{
+    font-family: "Platypi", serif;
+
+}
+body {
+    font-family: "Playfair Display", serif;
+}
+.Mobile{
+    width: 30%;
+    height: 100%;
+    display: none;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .Mobile{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+
+@media screen and(max-width: 320px) {
+    
+}
