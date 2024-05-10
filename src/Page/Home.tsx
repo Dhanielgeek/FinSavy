@@ -1,12 +1,8 @@
-import Hero from "./Hero/Hero"
-import Welcome from "./Welcome"
+
 
 const Home = () => {
   return (
-    <>
-    <Hero/>
-    <Welcome/>
-    </>
+    <div className=" w-[100%] h-[80vh] bg-red-400"id="home">Home</div>
   )
 }
 

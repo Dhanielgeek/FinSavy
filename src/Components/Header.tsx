@@ -2,7 +2,7 @@
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className=" w-[100%] h-[10vh] bg-blue-300" id="home">Header</div>
   )
 }
 

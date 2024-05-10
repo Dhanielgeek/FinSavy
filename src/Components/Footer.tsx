@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className=" w-[100%] h-[20vh] bg-green-600" id="footer">Footer</div>
   )
 }
 
