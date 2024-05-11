@@ -8,5 +8,36 @@
 
 }
 body {
-    font-family: "Playfair Display", serif;
+    font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+.Mobile{
+    width: 25%;
+    height: 100%;
+    display: none;
+}
+ 
+@media screen and (max-width:500px) {
+    .Mobile{
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Nav{
+        border-bottom: 1px solid lightgray;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .Mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Nav{
+        border-bottom: 1px solid lightgray;
+        width: 100%;
+    }
 }
