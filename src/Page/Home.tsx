@@ -1,27 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 const Home = () => {
-  const Context = [
+  const Context = useMemo(() => [
     {
       firstText: 'THINK IN INVESTMENT',
       secondText: 'Outstanding Platform with optimum Assistance!',
-      thirdText: 'With FinsTrading, all over the place becomes all in one place. Every part of your Investment lifestylecycle is here.',
+      thirdText: 'With FinsTrading, all over the place becomes all in one place. Every part of your Investment lifecycle is here.',
       fourthText: 'GET STARTED'
     },
     {
       firstText: 'THINK IN MOTION',
       secondText: 'Take your finances to The Next level with Us.',
-      thirdText: 'With FinsTrading, all over the place becomes all in one place. Every part of your Investment lifestylecycle is here.',
+      thirdText: 'With FinsTrading, all over the place becomes all in one place. Every part of your Investment lifecycle is here.',
       fourthText: 'LOGIN'
     },
     {
       firstText: 'THINK PROFITABLY',
       secondText: 'Total investment freedom for Everyone!',
-      thirdText: 'With FinsTrading, all over the place becomes all in one place. Every part of your Investment lifestylecycle is here.',
+      thirdText: 'With FinsTrading, all over the place becomes all in one place. Every part of your Investment lifecycle is here.',
       fourthText: 'LOGIN'
     }
-  ];
+  ], []);
 
   const [contextIndex, setContextIndex] = useState(0);
   const [currentSecondText, setCurrentSecondText] = useState('');
