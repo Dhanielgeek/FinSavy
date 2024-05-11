@@ -16,6 +16,12 @@ body {
     height: 100%;
     display: none;
 }
+.Home{
+    background-image: url('../src/assets/page-header.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
  
 @media screen and (max-width:500px) {
     .Mobile{

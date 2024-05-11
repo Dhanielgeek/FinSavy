@@ -47,7 +47,7 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="w-[22rem] h-[32rem] flex justify-around flex-col items-start bg-[#ffff] absolute top-[99.4%] right-[10px] phone:w-[22.5rem] smallPhone:w-[16.2rem] smallPhone:h-[32rem] smallPhone:right-[40px]"
+              className="w-[22rem] h-[32rem] flex justify-around flex-col items-start bg-[#ffff] absolute top-[99.4%] right-[10px] phone:w-[21rem] smallPhone:w-[16.2rem] MediumPhone:w-[15rem] smallPhone:h-[32rem] smallPhone:right-[40px]"
             >
               <div className="w-[100%] h-[80%] flex justify-center px-3 flex-col gap-7 font-semibold text-[#07122D] items-start text-[20px]">
                 <NavLink to='' className='Nav'>HOME</NavLink>
