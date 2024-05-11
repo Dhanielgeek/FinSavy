@@ -11,7 +11,7 @@ export default {
       tab: {max: "1024px"},
       desktop: {max: "1280px"},
       smallPhone: {max: "350px"},
-      MediumPhone : {max : '400px' }
+      MediumPhone : {max : '420px' }
   },
 },
   plugins: [],

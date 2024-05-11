@@ -11,7 +11,7 @@ const Home = () => {
     },
     {
       firstText: 'THINK IN MOTION',
-      secondText: 'Take your finances to The Next level.',
+      secondText: 'Take your finances to The Next level with Us.',
       thirdText: 'With FinsTrading, all over the place becomes all in one place. Every part of your Investment lifestylecycle is here.',
       fourthText: 'LOGIN'
     },
@@ -65,7 +65,7 @@ const Home = () => {
 
   return (
     <div className="Home w-[100%] h-[90vh] flex justify-center items-center" id="home">
-      <div className="w-[85%] h-[70%] hold phone:w-[90%] phone:h-[56%] smallPhone:h-[100%]">
+      <div className="w-[85%] h-[70%] hold phone:w-[90%] phone:h-[50%] MediumPhone:h-[50%] smallPhone:h-[100%]">
         <div className="w-[40%] h-[100%] flex justify-around items-start flex-col phone:w-[100%] ">
           <div className="w-[100%] h-[10%]  flex justify-start items-center">
             <h2 className="text-white">{Context[contextIndex].firstText}</h2>
