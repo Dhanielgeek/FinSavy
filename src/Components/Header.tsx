@@ -62,7 +62,9 @@ const Header = () => {
                 <NavLink to='' className='Nav'>CONTACT</NavLink>
               </div>
               <div className="w-[50%] h-[12%] flex justify-center items-center px-3">
-                <button className="w-[90%] h-[70%] rounded-sm bg-[#4B3BC6] text-[17px] text-white">GET STARTED</button>
+                <button className="w-[90%] h-[70%] rounded-sm bg-[#4B3BC6] text-[17px] text-white">
+                  <Link to='/signup'>GET STARTED</Link>
+                </button>
               </div>
             </motion.div>
           )}
