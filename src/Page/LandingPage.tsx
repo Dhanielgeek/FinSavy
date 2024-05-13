@@ -1,13 +1,13 @@
 
-import Developing from "./Developing"
 import Home from "./Home"
+import About from "./About"
 
 
 const LandingPage = () => {
   return (
     <>
     <Home/>
-    <Developing/>
+    <About/>
 
     </>
   )
