@@ -64,14 +64,14 @@ const Home = () => {
   }, [contextIndex, currentFourthText, Context]);
 
   return (
-    <div className="Home w-[100%] h-[90vh] flex justify-center items-center" id="home">
-      <div className="w-[85%] h-[70%] hold phone:w-[90%] phone:h-[50%] MediumPhone:h-[50%] smallPhone:h-[100%]">
+    <div className="Home w-[100%] h-[90vh] flex justify-center items-center smallPhone:h-[100vh]" id="home">
+      <div className="w-[85%] h-[70%] hold phone:w-[90%] phone:h-[55%]  MediumPhone:h-[60%] smallPhone:h-[100%]">
         <div className="w-[40%] h-[100%] flex justify-around items-start flex-col phone:w-[100%] ">
           <div className="w-[100%] h-[10%]  flex justify-start items-center">
             <h2 className="text-white">{Context[contextIndex].firstText}</h2>
           </div>
           <div className="w-[100%] h-[40%] flex justify-start items-center">
-            <h2 className="font-semibold text-6xl text-white phone:text-5xl smallPhone:text-[1.3rem] MediumPhone:text-[2.8rem]">
+            <h2 className="font-semibold text-6xl text-white phone:text-6xl smallPhone:text-[1.3rem] MediumPhone:text-[2.5rem]">
               <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
                 {currentSecondText}
               </motion.span>

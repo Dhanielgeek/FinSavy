@@ -3,6 +3,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineClear } from "react-icons/md";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -26,7 +27,9 @@ const Header = () => {
         <NavLink to=''>CONTACT</NavLink>
       </div>
       <div className="w-[13%] h-full flex justify-center items-center">
-        <button className="w-[90%] h-[70%] rounded-sm bg-[#4B3BC6] text-[17px] text-white phone:hidden smallPhone:hidden">GET STARTED</button>
+        <button className="w-[90%] h-[70%] rounded-sm bg-[#4B3BC6] text-[17px] text-white phone:hidden smallPhone:hidden">
+          <Link to='/signup'>GET STARTED</Link>
+        </button>
       </div>
       {/* Mobile View */}
       <div className="Mobile relative">
