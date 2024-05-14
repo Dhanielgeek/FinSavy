@@ -4,6 +4,7 @@ import LandingPage from "../Page/LandingPage"
 import SignUp from "../Auth/SignUp"
 import Login from "../Auth/Login"
 import ForgetPassword from "../Auth/ForgetPassword"
+import Dashboard from "../Client/Dashboard"
 
 export const Mainrouter = createBrowserRouter([
     {
@@ -27,5 +28,9 @@ export const Mainrouter = createBrowserRouter([
     {
         path: 'forget',
         element : <ForgetPassword/>
+    },
+    {
+        path : 'user',
+        element : <Dashboard/>,
     }
 ])
