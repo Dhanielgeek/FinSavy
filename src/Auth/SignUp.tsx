@@ -1,6 +1,6 @@
 import Logo from '../assets/1-removebg-preview.png'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 
@@ -23,7 +23,12 @@ const data = {firstName,lastName,userName,email,password,confirmPassword}
 const passwordRegex = /^(?=.*[a-zA-Z0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
 const isValidPassword = passwordRegex.test(password);
 
-const HandleSignup = async ()=>{
+const HandleSignup = async (e:FormEvent)=>{
+
+  e.preventDefault()
+
+  const Toastloading = toast.loading('Please wait')
+
 
   if(!firstName || !userName || !lastName || !email || !password || !confirmPassword ){
     toast.error('Please input all fields')
@@ -49,6 +54,7 @@ const HandleSignup = async ()=>{
     }
     finally{
       setloading(false)
+      toast.dismiss(Toastloading)
     }
   }
 
@@ -108,7 +114,7 @@ const HandleSignup = async ()=>{
           </div>
           <div className='w-[100%] h-[40%] flex justify-center items-center'>
             <button className='w-[90%] h-[60%] bg-[#5270FC] rounded-full text-lg text-white' onClick={HandleSignup}>
-            {loading ? "loading" : "CREATE ACCOUNT"}
+            {loading ? "LOADING" : "CREATE ACCOUNT"}
             </button>
           </div>
           <div className='w-[100%] h-[23%]  flex justify-center items-center'>
