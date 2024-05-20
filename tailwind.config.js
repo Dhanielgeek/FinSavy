@@ -10,8 +10,8 @@ export default {
       phone: {max: "500px"},
       tab: {max: "1024px"},
       desktop: {max: "1280px"},
-      smallPhone: {max: "350px"},
-      MediumPhone : {max : '420px' }
+      smallPhone: {max: "380px"},
+      MediumPhone : {max : '425px' }
   },
 },
   plugins: [],
