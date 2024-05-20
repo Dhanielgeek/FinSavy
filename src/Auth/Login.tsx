@@ -1,7 +1,52 @@
 import Logo from '../assets/1-removebg-preview.png'
 import { Link } from 'react-router-dom'
+import { FormEvent, useState } from 'react'
+import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import { Token, UserData } from '../Function/Slice'
+import toast from 'react-hot-toast'
+
 
 const Login = () => {
+
+
+  const [details, setdetails] = useState<string>('')
+  const [password, setpassword] = useState<string>('')
+  const [loading, setloading] = useState<boolean>(false)
+  const dispatch = useDispatch()
+
+const data = {details,password}
+const Url = 'https://fin-savy-application.vercel.app/api/v1/users/login'
+
+
+
+  const HandleLogin = async (e:FormEvent)=>{
+    e.preventDefault()
+    const Toastloading = toast.loading('please wait...')
+    try{
+      const response = await axios.post(Url,data)
+      dispatch(UserData(response.data.data))
+      dispatch(Token(response.data.Token))
+      toast.success('')
+    }catch(error:unknown){
+      if (axios.isAxiosError(error)) {
+        const errorMsg = error.response?.data?.message || 'An unexpected error occurred';
+        toast.error(errorMsg,{duration: 3000});
+      } else {
+        toast.error('Error occurred');
+      }
+    }finally{
+      setloading(true)
+      toast.dismiss(Toastloading)
+    }
+  }
+
+
+
+
+
+
+
   return (
     <div className="w-[100%] h-[45rem] bg-[#4B3BC6] flex justify-center items-center">
       <div className="w-[35%] h-[80%] bg-slate-50 rounded-lg flex flex-col justify-center gap-2 items-center phone:w-[90%]">
@@ -14,11 +59,11 @@ const Login = () => {
         </div>
         <div className='w-[85%] h-[14%]'>
           <label htmlFor="" className='text-xl font-medium text-[#454d4e]'>Email or UserName</label>
-          <input type="text" placeholder='Your Email or UserName' className='w-[100%] bg-transparent px-3 text-lg border-2 outline-none h-[60%] rounded-md' />
+          <input type="text" placeholder='Your Email or UserName' className='w-[100%] bg-transparent px-3 text-lg border-2 outline-none h-[60%] rounded-md' onChange={(e)=>setdetails(e.target.value)} />
         </div>
         <div className='w-[85%] h-[14%]'>
           <label htmlFor="" className='text-xl font-medium text-[#454d4e]'>Password</label>
-          <input type="password" placeholder='Your Password' className='w-[100%] bg-transparent px-3 text-lg border-2 outline-none h-[60%] rounded-md' />
+          <input type="password" placeholder='Your Password' className='w-[100%] bg-transparent px-3 text-lg border-2 outline-none h-[60%] rounded-md' onChange={(e)=>setpassword(e.target.value)} />
         </div>
         <div className='w-[85%] h-[10%] flex justify-between items-center'>
           <div className='w-[50%] h-[100%]  flex justify-start gap-2 items-center'>
@@ -30,7 +75,11 @@ const Login = () => {
           </p>
         </div>
         <div className='w-[80%] h-[18%]  flex justify-around items-center flex-col'>
-          <button className='w-[100%] h-[47%] bg-[#5270FC] rounded-full text-lg text-white'>Account Login</button>
+          <button className='w-[100%] h-[47%] bg-[#5270FC] rounded-full text-lg text-white' onClick={HandleLogin}>
+            {
+              loading ? "Loading" : "Account Login"
+            }
+          </button>
           <p className='text-xl smallPhone:text-[16px]'>Don't have an account ? <Link to='/signup' className='text-red-500'>Signup for free</Link></p>
         </div>
       </div>
