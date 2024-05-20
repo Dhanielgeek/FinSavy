@@ -24,7 +24,7 @@ body {
 .mobileHeader{
     width: 20%;
     height: 60%;
-    background: red;
+    /* background: red; */
     display: none;
 }
 
