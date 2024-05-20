@@ -7,7 +7,16 @@ const DashMobile = () => {
         <img src={Logo} alt="" className='w-[100%] h-[100%] object-contain' />
     </div>
     <div className='w-[100%] h-[80%] bg-pink-500'>
-        
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
     </div>
   )
