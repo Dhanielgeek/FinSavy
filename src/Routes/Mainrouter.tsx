@@ -7,6 +7,9 @@ import ForgetPassword from "../Auth/ForgetPassword"
 import Dashboard from "../Client/Dashboard"
 import Overview from "../Client/Overview"
 import Withdraw from "../Client/Withdraw"
+import Deposit from "../Client/Deposit"
+import MyPlans from "../Client/MyPlans"
+import History from "../Client/History"
 
 export const Mainrouter = createBrowserRouter([
     {
@@ -43,6 +46,18 @@ export const Mainrouter = createBrowserRouter([
             {
               path: '/user/withdraw',
               element : <Withdraw/>  
+            },
+            {
+                path : '/user/deposit',
+                element : <Deposit/>
+            },
+            {
+                path : '/user/plans',
+                element : <MyPlans/>
+            },
+            {
+                path : '/user/history',
+                element :<History/>
             }
         ]
     }

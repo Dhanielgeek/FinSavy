@@ -6,7 +6,7 @@ import { PiGearSix } from "react-icons/pi";
 import { IoIosMenu } from "react-icons/io";
 import { MdOutlineClear } from "react-icons/md";
 import DashMobile from "./DashMobile";
-import { Drawer, Menu, Dropdown } from "antd";
+import { Drawer } from "antd";
 
 const DashHeader = () => {
   const [ToggleMenu, setToggleMenu] = useState(false);
@@ -17,25 +17,14 @@ const DashHeader = () => {
     setToggleMenu(!ToggleMenu);
   };
 
-  const menu = (
-    <Menu>
-      <Menu.Item key="1" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <AiOutlineUser className="text-2xl" />
-        <span className="text-xl">My Profile</span>
-      </Menu.Item>
-      <Menu.Item key="2" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <PiGearSix className="text-2xl" />
-        <span className="text-xl">Account Settings</span>
-      </Menu.Item>
-      <Menu.Item key="3" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <AiOutlineUser className="text-2xl" />
-        <span className="text-xl">Log Out</span>
-      </Menu.Item>
-    </Menu>
-  );
+ const [ShowMenu, setShowMenu] = useState(false)
+
+ const HandleShowMenu = () => {
+   setShowMenu(!ShowMenu)
+ }
 
   return (
-    <div className="w-[100%] h-[13%] flex justify-between items-center shadow-sm">
+    <div className="w-[100%] h-[13%] flex  justify-between items-center shadow-sm">
       <div className="mobileHeader relative">
         {ToggleMenu ? (
           <MdOutlineClear className="text-2xl cursor-pointer" onClick={HandleHeaderMenu} />
@@ -43,13 +32,13 @@ const DashHeader = () => {
           <IoIosMenu className="text-2xl cursor-pointer" onClick={HandleHeaderMenu} />
         )}
         <Drawer
-          title="Dashboard"
           placement="left"
           onClose={HandleHeaderMenu}
           visible={ToggleMenu}
           width={280}
+          
         >
-          <DashMobile />
+          <DashMobile closeDrawer={HandleHeaderMenu} />
         </Drawer>
       </div>
       <div className="w-[25%] h-[100%] flex justify-center items-center flex-col phone:w-[30%] phone:h-[80%] smallPhone:w-[40%]">
@@ -58,16 +47,32 @@ const DashHeader = () => {
       </div>
       <div className="w-[40%] h-[100%] flex justify-center items-center">
         <div className="w-[50px] h-[50px] rounded-full bg-[#cccc] justify-center flex items-center">
-          <FaRegBell className="text-2xl"/>
+          <FaRegBell className="text-2xl text-blue-500"/>
         </div>
         <div className="w-[30%] h-[100%] justify-center gap-2 items-center flex">
           <div className="w-[55px] h-[55px] bg-[#cccc] rounded-full flex justify-center items-center phone:hidden smallPhone:hidden">
-            <p className="text-2xl">DB</p>
+            <p className="text-2xl font-semibold text-white">DB</p>
           </div>
           <div className="w-[10%] h-[40%] flex relative justify-center items-center phone:w-[20%]">
-            <Dropdown overlay={menu} trigger={['click']}>
-              <FaCaretDown className="text-2xl cursor-pointer" />
-            </Dropdown>
+            <FaCaretDown className="text-2xl cursor-pointer" onClick={HandleShowMenu}/>
+            {
+              ShowMenu ? (
+                <div className="w-[15rem] h-[13rem] flex justify-around items-start px-2 flex-col bg-white shadow-md absolute top-12 right-[-37px]">
+                  <div className="w-[70%] h-[20%] gap-3 flex justify-start items-center">
+                    <AiOutlineUser className="text-2xl"/>
+                    <p className="text-xl">My Profile</p>
+                  </div>
+                  <div className="w-[70%] h-[20%] justify-start gap-2 flex items-center">
+                    <PiGearSix className="text-2xl"/>
+                    <p className="text-xl">Account Settings</p>
+                  </div>
+                  <div className="w-[70%] h-[20%] justify-start gap-2 flex items-center">
+                    <AiOutlineUser className="text-2xl"/>
+                    <p className="text-xl">Log Out</p>
+                  </div>
+                </div>
+              ) : null
+            }
           </div>
         </div>
       </div>
