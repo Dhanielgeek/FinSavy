@@ -6,7 +6,6 @@ import { GoPlus } from "react-icons/go";
 import { LuWallet } from "react-icons/lu";
 import { BiMoneyWithdraw } from "react-icons/bi";
 import History from "./History";
-import TradingViewWidget from "./TradingViewTwo";
 
 const Overview = () => {
 
@@ -56,7 +55,7 @@ const HandleShow = ()=>{
           </div>
         </div>
         <div className="w-[40%] h-[90%] bg-pink-500 phone:hidden smallPhone:hidden">
-          <TradingViewWidget/>
+          
         </div>
       </div>
       <div className="w-[100%] h-[50%] bg-red-500">
