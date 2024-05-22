@@ -48,6 +48,7 @@ const Url = 'https://fin-savy-application.vercel.app/api/v1/users/login'
 
 
   return (
+    
     <div className="w-[100%] h-[45rem] bg-[#4B3BC6] flex justify-center items-center">
       <div className="w-[35%] h-[80%] bg-slate-50 rounded-lg flex flex-col justify-center gap-2 items-center phone:w-[90%]">
         <div className="w-[30%] h-[20%] flex justify-center items-center">
