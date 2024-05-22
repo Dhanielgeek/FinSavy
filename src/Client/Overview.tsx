@@ -6,7 +6,8 @@ import { GoPlus } from "react-icons/go";
 import { LuWallet } from "react-icons/lu";
 import { BiMoneyWithdraw } from "react-icons/bi";
 import History from "./History";
-import RenderLineChart from "../Components/Graph";
+import TradingViewWidget from "./TradingViewTwo";
+
 const Overview = () => {
 
 const [ShowAmount, setShowAmount] = useState(false)
@@ -32,7 +33,7 @@ const HandleShow = ()=>{
         </div>
       </div>
       <div className="w-[100%] h-[40%] flex justify-around  items-center">
-        <div className="w-[40%] h-[80%] bg-white rounded-md flex flex-col justify-around items-start phone:w-[90%] phone:h-[80%]">
+        <div className="w-[40%] h-[80%] bg-white rounded-md flex flex-col justify-around items-start phone:w-[90%] phone:h-[80%] ">
           <div className="w-[50%] h-[20%] flex justify-start px-5 items-center">
             <p className="text-2xl smallPhone:text-lg">Wallet Balance</p>
           </div>
@@ -54,8 +55,8 @@ const HandleShow = ()=>{
             <button className="w-[30%] h-[60%] border-solid border-2 text-sky-500 font-semibold rounded-md gap-1 bg-[#edf2fb] text-xl border-sky-500 flex justify-center items-center phone:text-lg phone:w-[30%] phone:h-[45%] smallPhone:h-[52%] smallPhone:text-sm"> <LuWallet/> My Plans</button>
           </div>
         </div>
-        <div className="w-[40%] h-[80%]  phone:hidden smallPhone:hidden">
-          <RenderLineChart/>
+        <div className="w-[40%] h-[90%] bg-pink-500 phone:hidden smallPhone:hidden">
+          <TradingViewWidget/>
         </div>
       </div>
       <div className="w-[100%] h-[50%] bg-red-500">
