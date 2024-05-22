@@ -5,6 +5,8 @@ import { useState } from "react";
 import { GoPlus } from "react-icons/go";
 import { LuWallet } from "react-icons/lu";
 import { BiMoneyWithdraw } from "react-icons/bi";
+import History from "./History";
+import RenderLineChart from "../Components/Graph";
 const Overview = () => {
 
 const [ShowAmount, setShowAmount] = useState(false)
@@ -52,9 +54,13 @@ const HandleShow = ()=>{
             <button className="w-[30%] h-[60%] border-solid border-2 text-sky-500 font-semibold rounded-md gap-1 bg-[#edf2fb] text-xl border-sky-500 flex justify-center items-center phone:text-lg phone:w-[30%] phone:h-[45%] smallPhone:h-[52%] smallPhone:text-sm"> <LuWallet/> My Plans</button>
           </div>
         </div>
-        <div className="w-[40%] h-[80%] bg-black phone:hidden smallPhone:hidden"></div>
+        <div className="w-[40%] h-[80%]  phone:hidden smallPhone:hidden">
+          <RenderLineChart/>
+        </div>
       </div>
-      <div className="w-[100%] h-[50%] bg-red-500"></div>
+      <div className="w-[100%] h-[50%] bg-red-500">
+        <History/>
+      </div>
     </div>
   )
 }

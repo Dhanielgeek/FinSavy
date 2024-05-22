@@ -2,7 +2,7 @@
 
 const Deposit = () => {
   return (
-    <div>Deposit</div>
+    <div className=" w-[100%] ">Deposit</div>
   )
 }
 
