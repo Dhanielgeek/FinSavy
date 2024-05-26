@@ -2,7 +2,7 @@
 
 const Deposit = () => {
   return (
-    <div className=" w-[100%] ">Deposit</div>
+    <div className=" w-[100%] h-[100vh] bg-blue-600 ">Deposit</div>
   )
 }
 
