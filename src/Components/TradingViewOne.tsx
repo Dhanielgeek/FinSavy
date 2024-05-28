@@ -54,7 +54,7 @@ const TradingViewWidgettwo: React.FC = () => {
   }, [isMounted]); // Add isMounted to dependency array
 
   return (
-    <div className="tradingview-widget-container" ref={containerRef} style={{ height: '500px' }}>
+    <div className="tradingview-widget-container" ref={containerRef} style={{ height: '400px' }}>
       <div className="tradingview-widget-container__widget" style={{ height: '200rem' }}></div>
       <div className="tradingview-widget-copyright">
         <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">

@@ -31,9 +31,9 @@ body {
 .ant-drawer-body{
     padding: 0 !important;
 }
- .tradingview-widget-container{
+ /* .tradingview-widget-container{
     height: 50px !important;
- }
+ } */
  
 
  
@@ -55,9 +55,9 @@ body {
         justify-content: center;
         align-items: center;
     }
-    .tradingview-widget-container{
-        height: 60px !important;
-     }
+    /* .tradingview-widget-container{
+        height: 50px !important;
+     } */
 }
 
 @media screen and (max-width:320px) {

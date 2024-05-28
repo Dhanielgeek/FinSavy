@@ -41,16 +41,16 @@ const DashHeader = () => {
           <DashMobile closeDrawer={HandleHeaderMenu} />
         </Drawer>
       </div>
-      <div className="w-[25%] h-[100%] flex justify-center items-center flex-col phone:w-[30%] phone:h-[80%] smallPhone:w-[40%]">
+      <div className="w-[25%] h-[100%] flex justify-center items-center flex-col  phone:hidden smallPhone:hidden">
         <p className="text-lg font-medium text-[#CCCC]">Good Morning 🌞</p>
         <h2 className=" text-3xl font-semibold phone:text-2xl">Daniel Ben</h2>
       </div>
-      <div className="w-[40%] h-[100%] flex justify-center items-center">
-        <div className="w-[50px] h-[50px] rounded-full bg-[#cccc] justify-center flex items-center">
+      <div className="w-[30%] h-[100%] flex justify-center items-center">
+        <div className="w-[30%] h-[100%]  justify-center gap-2 items-center phone:w-[70%] flex">
+        <div className="w-[45px] h-[45px] rounded-full bg-[#cccc] justify-center flex items-center">
           <FaRegBell className="text-2xl text-blue-500"/>
         </div>
-        <div className="w-[30%] h-[100%] justify-center gap-2 items-center flex">
-          <div className="w-[55px] h-[55px] bg-[#cccc] rounded-full flex justify-center items-center phone:hidden smallPhone:hidden">
+          <div className="w-[45px] h-[45px] bg-[#cccc] rounded-full flex justify-center items-center phone:hidden smallPhone:hidden">
             <p className="text-2xl font-semibold text-white">DB</p>
           </div>
           <div className="w-[10%] h-[40%] flex relative justify-center items-center phone:w-[20%]">
