@@ -24,7 +24,7 @@ const DashHeader = () => {
  }
 
   return (
-    <div className="w-[100%] h-[13%] flex  justify-between items-center shadow-sm">
+    <div className="w-[100%] h-[13%] flex border-b-2  justify-between items-center shadow-sm">
       <div className="mobileHeader relative">
         {ToggleMenu ? (
           <MdOutlineClear className="text-2xl cursor-pointer" onClick={HandleHeaderMenu} />
