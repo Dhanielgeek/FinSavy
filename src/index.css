@@ -55,9 +55,7 @@ body {
         justify-content: center;
         align-items: center;
     }
-    /* .tradingview-widget-container{
-        height: 50px !important;
-     } */
+  
 }
 
 @media screen and (max-width:320px) {
